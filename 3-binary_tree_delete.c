@@ -16,7 +16,6 @@ void binary_tree_delete(binary_tree_t *tree)
 	{
 		return;
 	}
-	
 	current = subtree_left(tree);
 	while (current->parent)
 	{
@@ -36,6 +35,15 @@ void binary_tree_delete(binary_tree_t *tree)
 	}
 	free(current);
 }
+
+/**
+ * subtree_left - iterate on the left subtree of a tree
+ * @subtree: pointer to the root of the subtree
+ *
+ * Return: the most left node of the subtree if there is no
+ * the most right node of the subtree if there is no
+ * the root node of the subtree
+ */
 
 binary_tree_t *subtree_left(binary_tree_t *subtree)
 {
