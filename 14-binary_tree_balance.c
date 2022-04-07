@@ -26,5 +26,5 @@ int binary_tree_balance(const binary_tree_t *tree)
 		right_height = binary_tree_height(tree->right);
 	}
 	printf("left: %d, right: %d \n", left_height, right_height);
-	return (left_height- right_height);
+	return (left_height - right_height);
 }
