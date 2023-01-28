@@ -28,6 +28,17 @@ void binary_tree_delete(binary_tree_t *tree)
 			continue;
 		}
 		temp = curr->parent;
+		if (temp)
+		{
+			if (temp->left == curr)
+			{
+				temp->left = NULL;
+			}
+			else
+			{
+				temp->right = NULL;
+			}
+		}
 		free(curr);
 		curr = temp;
 		temp = NULL;
